@@ -1,0 +1,7 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+ArduinoJson
+MD_Parola
+MD_MAX72XX
+PubSubClient

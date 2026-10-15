@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Ruggero Ferretti",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": -59.26,
+      "left": 320.5,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "matrix2",
+      "top": -133.8,
+      "left": 218.64,
+      "attrs": { "chain": "4" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:23", "matrix2:DIN", "blue", [ "v38.4", "h306.68", "v-230.4" ] ],
+    [ "esp:18", "matrix2:CLK", "orange", [ "v28.8", "h364.8", "v-201.6" ] ],
+    [ "esp:5", "matrix2:CS", "green", [ "v48", "h393.6", "v-230.4" ] ],
+    [ "esp:5V", "matrix2:V+", "red", [ "v-19.05", "h451.2", "v-96" ] ],
+    [ "esp:GND.1", "matrix2:GND", "black", [ "v-9.45", "h441.6", "v-96" ] ]
+  ],
+  "dependencies": {}
+}
